@@ -1,0 +1,57 @@
+<%- include("header") -%>
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md fixed-top" style="background-color: #a683e3;">
+            <a class="navbar-brand  fs-2 " href="/">ToDoMe</a>
+
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link active fs-3" href="/">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-3" href="/work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fs-3" href="/about">about</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+
+        <div class="box" id="heading">
+            <h1>
+                <%= titleList %>
+            </h1>
+        </div>
+    
+        <div class="box">
+    
+            <% for(let i=0; i<newListItems.length; i++){ %>
+    
+                <div class="item">
+                    <input type="checkbox" name="" id="">
+                    <p>
+                        <%= newListItems[i] %>
+                    </p>
+                </div>
+    
+                <% } %>
+    
+                    <form class="item" action="/" method="post" autocomplete="off">
+    
+                        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    
+                        <button type="submit" name="button" value="<%= titleList %>">+</button>
+    
+                    </form>
+        </div>
+
+
+    
+
+    <%- include("footer") -%>
